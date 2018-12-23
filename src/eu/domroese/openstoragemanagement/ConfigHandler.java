@@ -41,8 +41,8 @@ public class ConfigHandler {
 
         try {
             Properties props = new Properties();
-            props.setProperty("mysqlHost", "domroese.eu");
-            props.setProperty("mysqlUser", "osm");
+            props.setProperty("mysqlHost", "mysql.server.local");
+            props.setProperty("mysqlUser", "mysqluser");
             props.setProperty("mysqlPassword", "someVerySecurePassword");
             props.setProperty("mysqlPort", "3306");
             FileWriter writer = new FileWriter(configFile);
