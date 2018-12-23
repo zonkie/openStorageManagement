@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="mainWindow" prefHeight="1000.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eu.domroese.openstoragemanagement.Controller">
+    <children>
+        <TabPane layoutX="-86.0" layoutY="-93.0" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <tabs>
+                <Tab text="Contents">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TableView id="tableViewPartsList" prefHeight="329.0" prefWidth="370.0" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0" />
+                                <TextField id="txtComponentName" layoutX="14.0" layoutY="841.0" AnchorPane.bottomAnchor="99.0" AnchorPane.leftAnchor="14.0" />
+                                <TextField id="txtComponentDescription" layoutX="14.0" layoutY="868.0" AnchorPane.bottomAnchor="72.0" />
+                                <TextField id="txtComponentAmount" layoutX="14.0" layoutY="895.0" prefHeight="27.0" prefWidth="32.0" AnchorPane.bottomAnchor="45.0" />
+                                <Button id="btnAddContent" alignment="TOP_LEFT" graphicTextGap="2.0" layoutX="14.0" layoutY="922.0" mnemonicParsing="false" onAction="#handleAddStorageContent" prefHeight="31.0" prefWidth="98.0" text="add Content" textAlignment="CENTER" AnchorPane.bottomAnchor="14.0" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Containers">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TableView id="tableViewContainers" fx:id="tableViewContainers" prefHeight="200.0" prefWidth="580.0" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0" />
+                                <Button id="btnAddContainer" alignment="TOP_LEFT" graphicTextGap="2.0" layoutX="14.0" layoutY="922.0" mnemonicParsing="false" onAction="#handleAddStorageContainer" prefHeight="31.0" prefWidth="108.0" text="add Container" textAlignment="CENTER" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" />
+
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Compartments">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TableView id="tableviewCompartments" fx:id="tableviewCompartments" prefHeight="200.0" prefWidth="580.0" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0" />
+                                <Button id="btnAddCompartment" alignment="TOP_LEFT" graphicTextGap="2.0" layoutX="14.0" layoutY="922.0" mnemonicParsing="false" onAction="#handleAddStorageCompartment" prefHeight="31.0" prefWidth="136.0" text="add Compartment" textAlignment="CENTER" AnchorPane.bottomAnchor="14.0" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>
